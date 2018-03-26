@@ -13,9 +13,11 @@ Follow these steps to test the project:
 4. In VS Code, open the terminal (menu View | Integrated Terminal)
 5. run the following command:
 npm install
+
 Wait a couple of minutes until the project dependencies are restored and the prompt is available again.
 6. run the following command:
 npm start
+
 Wait until the project is compiled. The message "webpack: Compiled successfully." will be displaye. It means that the SPA (Single PAge Application) is ready to be opened in a web broser.
 7. Run a web browser and open the URL http://localhost:4200/svgs
 8. If everything is okay, a list containing two rows should be displayed.
