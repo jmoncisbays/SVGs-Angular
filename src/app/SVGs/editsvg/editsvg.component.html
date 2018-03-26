@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="card border-info">
+        <div class="card-header bg-transparent">
+            <span>{{ svg.id === undefined ? "New SVG" : "Modify SVG" }}</span>
+        </div>
+        <form novalidate #form="ngForm" (ngSubmit)="save(form)" autocomplete="Off">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6 res-container">
+                        <mat-form-field>
+                            <input matInput placeholder="Title" #title="ngModel" name="title" id="title" [(ngModel)]="svg.title" required maxlength="100" >
+                            <mat-error *ngIf="title.invalid && title.touched">Please provide the title</mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-6 file">
+                        <label>{{ !svg.id ? "File" : "New File?" }}</label><br>
+                        <input type="file" id="file" (change)="fileOnChange($event)" accept=".svg">
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer text-right">
+                <button type="submit" class="btn btn-primary mr-1" [disabled]="form.invalid || !svg.specification || saving">
+                    <span *ngIf="saving==false">Save</span>
+                    <span *ngIf="saving==true">Saving <i class="fas fa-circle-notch fa-spin"></i></span>
+                </button>
+                <button type="button" class="btn btn-secondary" (click)="backOrCancel(form)">{{ !svg.id ? "Cancel" : "Back" }} </button>
+            </div>
+        </form>
+    </div>
+</div>

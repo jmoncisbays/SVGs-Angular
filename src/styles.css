@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url("css/bootstrap.min.css");
+@import url("css/indigo-pink.css");
+
+body {
+    font-family: "Open Sans", Helvetica, Arial, Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 23px;
+    color: #333333;
+}
+
+.boxShadow {
+    /* box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12); */
+    box-shadow: 0 3px 4px #ddd;
+}
+
+.sl-option-height-reduced > mat-list-option {
+    height: 36px;
+}
+
+.sl-option-height-reduced > mat-list-option > .mat-list-item-content {
+    height: 36px;
+}
+
+div.card-header span {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
